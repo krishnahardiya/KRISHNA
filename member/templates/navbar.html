@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- <{load static}> -->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Website HTML and CSS | CodingNepal</title>
+  <link rel="stylesheet" href="static/css/style.css">
+  <!-- Google Fonts Links For Icon -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+</head>
+
+<body>
+  {% block content %}
+  <header>
+    <nav class="navbar">
+      <a class="logo" href="navbarkrishna">--K₹$NA--<span></span></a>
+      <ul class="menu-links">
+        <span id="close-menu-btn" class="material-symbols-outlined">close</span>
+        <li><a href="home">Home</a></li>
+        <li><a href="product">Products</a></li>
+        <li><a href="reg">member</a></li>
+        <li><a href="about">About us</a></li>
+        <li><a href="contact">Contact us</a></li>
+        <li><a href="login">login us</a></li>
+      </ul>
+      <span id="hamburger-btn" class="material-symbols-outlined">menu</span>
+    </nav>
+  </header>
+  {% endblock %}
+
+  <section class="hero-section">
+    <div class="content">
+      <h2>ENHACE A STYLE BY <BR>--K₹$NA--</STYLE>
+      </h2>
+      <p>
+
+
+
+      </p>
+      <!-- <button>Order Now</button> -->
+      <a href="product">
+        <button type="button">ORDER NOW</button>
+      </a>
+    </div>
+  </section>
+
+  <script>
+    const header = document.querySelector("header");
+    const hamburgerBtn = document.querySelector("#hamburger-btn");
+    const closeMenuBtn = document.querySelector("#close-menu-btn");
+
+    // Toggle mobile menu on hamburger button click
+    hamburgerBtn.addEventListener("click", () => header.classList.toggle("show-mobile-menu"));
+
+    // Close mobile menu on close button click
+    closeMenuBtn.addEventListener("click", () => hamburgerBtn.click());
+  </script>
+
+</body>
+
+</html>
