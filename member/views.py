@@ -88,8 +88,7 @@ def reg(request):
             username = request.POST['username']
             password = request.POST['password']
             #create neww user
-            user = User.objects.create_user(username=username, email=email,password=password)
-            user.save()
+            member.objects.create(username=username, email=email,password=password)
             messages.success(request,'account created succesfully..')
             return redirect('login')
     return render(request, 'reg.html')
