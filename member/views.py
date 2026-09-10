@@ -91,6 +91,6 @@ def reg(request):
             Member.objects.create(name=username, email=email, Password=password)
             messages.success(request,'account created succesfully..')
             return redirect('login')
-    return render(request, 'login.html')
+    return render(request, 'reg.html')
     
 from .models import member as Member
